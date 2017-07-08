@@ -33,31 +33,31 @@ def api_test(request):
 
 
 def MODEL(image):
-    if K.image_data_format() == 'channels_first':
-        input_shape = (1, 56, 56)
-    else:
-        input_shape = (56, 56, 1)
-    model = Sequential()
-    model.add(Conv2D(32, kernel_size=(3, 3),
-                     activation='relu',
-                     input_shape=(1, 56, 56)))
-    model.add(Conv2D(32, (3, 3), activation='relu'))
-    model.add(MaxPooling2D(pool_size=(2, 2)))
+#     if K.image_data_format() == 'channels_first':
+#         input_shape = (1, 56, 56)
+#     else:
+#         input_shape = (56, 56, 1)
+#     model = Sequential()
+#     model.add(Conv2D(32, kernel_size=(3, 3),
+#                      activation='relu',
+#                      input_shape=(1, 56, 56)))
+#     model.add(Conv2D(32, (3, 3), activation='relu'))
+#     model.add(MaxPooling2D(pool_size=(2, 2)))
 
-    model.add(Conv2D(64, (3, 3), activation='relu'))
-    model.add(Conv2D(64, (3, 3), activation='relu'))
-    model.add(MaxPooling2D(pool_size=(2, 2)))
+#     model.add(Conv2D(64, (3, 3), activation='relu'))
+#     model.add(Conv2D(64, (3, 3), activation='relu'))
+#     model.add(MaxPooling2D(pool_size=(2, 2)))
 
-    model.add(Flatten())
-    model.add(Dense(128, activation='relu'))
-    model.add(Dropout(0.25))
-    model.add(Dense(60, activation='softmax'))
+#     model.add(Flatten())
+#     model.add(Dense(128, activation='relu'))
+#     model.add(Dropout(0.25))
+#     model.add(Dense(60, activation='softmax'))
 
 
-    model.compile(loss='categorical_crossentropy', optimizer=keras.optimizers.Adadelta(), metrics=['accuracy'])
-    print("Atkaise ? ")
-    model.load_weights('/home/codehead/BanglaLekha_Project/django_rest_imageupload_backend/rest_api/weight_current.hdf5')
-    print("Atkaise ? Abar?")
+#     model.compile(loss='categorical_crossentropy', optimizer=keras.optimizers.Adadelta(), metrics=['accuracy'])
+#     print("Atkaise ? ")
+#     model.load_weights('/home/codehead/BanglaLekha_Project/django_rest_imageupload_backend/rest_api/weight_current.hdf5')
+#     print("Atkaise ? Abar?")
     img_rows, img_cols = 56, 56
 
     img = cv2.imread(image)
@@ -69,9 +69,10 @@ def MODEL(image):
     img = img.astype('float32')
     img /= 255
 
-    value = model.predict_classes(img)
-    print(value[0])
-    return value[0]
+#     value = model.predict_classes(img)
+#     print(value[0])
+#     return value[0]
+    return 1;
 def get_pred(full_filename):
     img = np.array(Image.open(full_filename).convert('RGB'))
     # img = img.reshape((3,512,512))
