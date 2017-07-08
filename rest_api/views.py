@@ -56,7 +56,8 @@ def MODEL(image):
 
     model.compile(loss='categorical_crossentropy', optimizer=keras.optimizers.Adadelta(), metrics=['accuracy'])
     print("Atkaise ? ")
-    model.load_weights('/home/codehead/BanglaLekha_Project/django_rest_imageupload_backend/rest_api/weight_current.hdf5')
+    #model.load_weights('/home/codehead/BanglaLekha_Project/django_rest_imageupload_backend/rest_api/weight_current.hdf5')
+    model.load_weights('/root/projects/django_rest_api/rest_api/weight_current.hdf5')
     print("Atkaise ? Abar?")
     img_rows, img_cols = 56, 56
 
