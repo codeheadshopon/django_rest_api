@@ -33,10 +33,19 @@ def api_test(request):
 
 
 def MODEL(image):
+    img = cv2.imread(image)
+    img = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
+    print(img.shape)
+    img = cv2.resize(img, (56, 56))
     if K.image_data_format() == 'channels_first':
         input_shape = (1, 56, 56)
+        img = img.reshape(1, 1, 56, 56)
     else:
         input_shape = (56, 56, 1)
+        img = img.reshape(1, 56, 56,1)
+    img = img.astype('float32')
+    img /= 255
+    
     model = Sequential()
     model.add(Conv2D(32, kernel_size=(3, 3),
                      activation='relu',
@@ -61,14 +70,10 @@ def MODEL(image):
     print("Atkaise ? Abar?")
     img_rows, img_cols = 56, 56
 
-    img = cv2.imread(image)
-    img = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
-    print(img.shape)
-    img = cv2.resize(img, (56, 56))
-    img = img.reshape(1, 1, 56, 56)
+   
+   
 
-    img = img.astype('float32')
-    img /= 255
+
 
     value = model.predict_classes(img)
     print(value[0])
