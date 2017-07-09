@@ -58,6 +58,7 @@ print("Atkaise ? ")
 model.load_weights('/root/projects/django_rest_api/imageupload/Weight_Current.hdf5')
 print("Atkaise ? Abar?")
 img_rows, img_cols = 56, 56
-
+value= model.predict_proba(img)
+print(value)
 value = model.predict_classes(img)
 print(value[0])
