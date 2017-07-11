@@ -13,6 +13,7 @@ import keras.backend as K
 import keras
 from keras.callbacks import ModelCheckpoint
 from PIL import Image
+from keras.optimizers import RMSprop
 
 image='/root/projects/django_rest_api/uploaded_media/b_2.jpg'
 
