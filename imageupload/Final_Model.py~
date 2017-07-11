@@ -14,6 +14,7 @@ import keras
 from keras.callbacks import ModelCheckpoint
 from PIL import Image
 from keras.optimizers import RMSprop
+
 image='/root/projects/django_rest_api/uploaded_media/b_2.jpg'
 
 
@@ -21,21 +22,28 @@ img = Image.open(image).convert('L')
 img = img.resize((56, 56), Image.ANTIALIAS)
 
 img = np.array(img)
-img=img.reshape(1,56*56)
 
 model = Sequential()
-model.add(Dense(512, activation='relu', input_shape=(56*56,)))
-model.add(Dropout(0.2))
-model.add(Dense(512, activation='relu'))
-model.add(Dropout(0.2))
-model.add(Dense(60, activation='softmax'))
+model.add(Conv2D(32, kernel_size=(3, 3),
+                 activation='relu',
+                 input_shape=(1,56,56)))
+model.add(Conv2D(32, (3, 3), activation='relu'))
+model.add(MaxPooling2D(pool_size=(2, 2)))
 
-model.compile(loss='categorical_crossentropy',
-              optimizer=RMSprop(),
-              metrics=['accuracy'])
+model.add(Conv2D(64, (3, 3), activation='relu'))
+model.add(Conv2D(64, (3, 3), activation='relu'))
+model.add(MaxPooling2D(pool_size=(2, 2)))
+
+model.add(Flatten())
+model.add(Dense(128,activation='relu'))
+model.add(Dropout(0.25))
+model.add(Dense(nb_class, activation='softmax'))
+
+
+model.compile(loss='categorical_crossentropy', optimizer=keras.optimizers.Adadelta(), metrics=['accuracy'])
 
 #model.load_weights('/home/codehead/Downloads/django_rest_api/imageupload/weights.hdf5')
-model.load_weights('/root/projects/django_rest_api/imageupload/weight.hdf5')
+model.load_weights('/root/projects/django_rest_api/imageupload/weights.hdf5')
 print("Atkaise ? Abar?")
 
 value= model.predict_proba(img)
