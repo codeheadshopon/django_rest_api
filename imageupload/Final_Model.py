@@ -23,6 +23,13 @@ img = img.resize((56, 56), Image.ANTIALIAS)
 
 img = np.array(img)
 
+if K.image_data_format() == 'channels_first':
+    input_shape = (1, 56, 56)
+    img = img.reshape(1, 1, 56, 56)
+else:
+    input_shape = (56, 56, 1)
+    img = img.reshape(1, 56, 56,1)
+    
 model = Sequential()
 model.add(Conv2D(32, kernel_size=(3, 3),
                  activation='relu',
