@@ -15,8 +15,8 @@ from keras.callbacks import ModelCheckpoint
 from PIL import Image
 from keras.optimizers import RMSprop
 nb_class=60
-image='/root/projects/django_rest_api/uploaded_media/b_2.jpg'
-
+#image='/root/projects/django_rest_api/uploaded_media/b_2.jpg'
+image='/root/django_rest_api/uploaded_media/b_2.jpg'
 img = cv2.imread(image)
 img = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
 print(img.shape)
@@ -48,7 +48,10 @@ model.add(Dense(nb_class, activation='softmax'))
 model.compile(loss='categorical_crossentropy', optimizer=keras.optimizers.Adadelta(), metrics=['accuracy'])
 
 #model.load_weights('/home/codehead/Downloads/django_rest_api/imageupload/weights.hdf5')
-model.load_weights('/root/projects/django_rest_api/imageupload/finalweight.hdf5')
+#model.load_weights('/root/projects/django_rest_api/imageupload/finalweight.hdf5')
+model.load_weights('/root/django_rest_api/imageupload/finalweight.hdf5')
+
+
 print("Atkaise ? Abar?")
 
 value= model.predict_proba(img)
