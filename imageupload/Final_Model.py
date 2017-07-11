@@ -17,12 +17,10 @@ from keras.optimizers import RMSprop
 
 image='/root/projects/django_rest_api/uploaded_media/b_2.jpg'
 
-
-img = Image.open(image).convert('L')
-img = img.resize((56, 56), Image.ANTIALIAS)
-
-img = np.array(img)
-
+img = cv2.imread(image)
+img = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
+print(img.shape)
+img = cv2.resize(img, (56, 56))
 if K.image_data_format() == 'channels_first':
     input_shape = (1, 56, 56)
     img = img.reshape(1, 1, 56, 56)
