@@ -14,7 +14,7 @@ import keras
 from keras.callbacks import ModelCheckpoint
 from PIL import Image
 from keras.optimizers import RMSprop
-
+nb_class=60
 image='/root/projects/django_rest_api/uploaded_media/b_2.jpg'
 
 img = cv2.imread(image)
