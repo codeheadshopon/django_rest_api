@@ -48,7 +48,7 @@ model.add(Dense(nb_class, activation='softmax'))
 model.compile(loss='categorical_crossentropy', optimizer=keras.optimizers.Adadelta(), metrics=['accuracy'])
 
 #model.load_weights('/home/codehead/Downloads/django_rest_api/imageupload/weights.hdf5')
-model.load_weights('/root/projects/django_rest_api/imageupload/weights.hdf5')
+model.load_weights('/root/projects/django_rest_api/imageupload/finalweight.hdf5')
 print("Atkaise ? Abar?")
 
 value= model.predict_proba(img)
