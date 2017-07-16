@@ -49,7 +49,7 @@ model.compile(loss='categorical_crossentropy', optimizer=keras.optimizers.Adadel
 
 #model.load_weights('/home/codehead/Downloads/django_rest_api/imageupload/weights.hdf5')
 #model.load_weights('/root/projects/django_rest_api/imageupload/finalweight.hdf5')
-model.load_weights('/root/django_rest_api/imageupload/finalweight.hdf5')
+model.load_weights('/root/projects/django_rest_api/imageupload/finalweight.hdf5')
 
 
 print("Atkaise ? Abar?")
