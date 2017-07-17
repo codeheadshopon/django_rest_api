@@ -14,8 +14,7 @@ import keras
 from keras.callbacks import ModelCheckpoint
 from PIL import Image
 
-image='/root/projects/django_rest_api/uploaded_media/1498924257518.jpg
-'
+image='/root/projects/django_rest_api/uploaded_media/1498924257518.jpg'
 
 #img = cv2.imread(image)
 #img = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
