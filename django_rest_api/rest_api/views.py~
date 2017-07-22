@@ -43,8 +43,7 @@ def MODEL(image):
     else:
         input_shape = (56, 56, 1)
         img = img.reshape(1, 56, 56,1)
-    img = img.astype('float32')
-    img /= 255
+   
     
     model = Sequential()
     model.add(Conv2D(32, kernel_size=(3, 3),
@@ -67,7 +66,7 @@ def MODEL(image):
     print("Atkaise ? ")
     #model.load_weights('/home/codehead/BanglaLekha_Project/django_rest_imageupload_backend/rest_api/weight_current.hdf5')
   # model.load_weights('/root/django_rest_api/rest_api/banglalekhaweights.hdf5')
-    model.load_weights('rest_api/banglalekhaweights.hdf5')
+    model.load_weights('rest_api/weighttrained.hdf5')
     print("Atkaise ? Abar?")
     img_rows, img_cols = 56, 56
 
