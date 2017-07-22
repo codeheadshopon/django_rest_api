@@ -16,7 +16,6 @@ import PIL.ImageOps
 import numpy as np
 import os
 import cv2
-import matplotlib.pyplot as plt
 from keras.models import Sequential
 from keras.layers import Dense, Dropout, Flatten
 from keras.layers import Conv2D, MaxPooling2D
@@ -66,7 +65,7 @@ def MODEL(image):
     print("Atkaise ? ")
     #model.load_weights('/home/codehead/BanglaLekha_Project/django_rest_imageupload_backend/rest_api/weight_current.hdf5')
   # model.load_weights('/root/django_rest_api/rest_api/banglalekhaweights.hdf5')
-    model.load_weights('rest_api/weighttrained.hdf5')
+    model.load_weights('rest_api/weighttraineded.hdf5')
     print("Atkaise ? Abar?")
     img_rows, img_cols = 56, 56
 
