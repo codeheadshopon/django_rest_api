@@ -43,8 +43,7 @@ def MODEL(image):
     else:
         input_shape = (56, 56, 1)
         img = img.reshape(1, 56, 56,1)
-    img = img.astype('float32')
-    img /= 255
+   
     
     model = Sequential()
     model.add(Conv2D(32, kernel_size=(3, 3),
