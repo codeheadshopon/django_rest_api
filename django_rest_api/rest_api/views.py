@@ -16,7 +16,6 @@ import PIL.ImageOps
 import numpy as np
 import os
 import cv2
-import matplotlib.pyplot as plt
 from keras.models import Sequential
 from keras.layers import Dense, Dropout, Flatten
 from keras.layers import Conv2D, MaxPooling2D
