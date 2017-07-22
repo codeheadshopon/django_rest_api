@@ -1,0 +1,36 @@
+[2017-07-20 22:48:22 +0000] [10416] [INFO] Starting gunicorn 19.6.0
+[2017-07-20 22:48:22 +0000] [10416] [INFO] Listening at: http://0.0.0.0:8000 (10416)
+[2017-07-20 22:48:22 +0000] [10416] [INFO] Using worker: sync
+[2017-07-20 22:48:22 +0000] [10441] [INFO] Booting worker with pid: 10441
+[2017-07-20 22:48:22 +0000] [10443] [INFO] Booting worker with pid: 10443
+[2017-07-20 22:48:22 +0000] [10444] [INFO] Booting worker with pid: 10444
+[2017-07-20 22:48:40 +0000] [10450] [INFO] Starting gunicorn 19.6.0
+[2017-07-20 22:48:40 +0000] [10450] [ERROR] Connection in use: ('0.0.0.0', 8000)
+[2017-07-20 22:48:40 +0000] [10450] [ERROR] Retrying in 1 second.
+[2017-07-20 22:48:41 +0000] [10450] [ERROR] Connection in use: ('0.0.0.0', 8000)
+[2017-07-20 22:48:41 +0000] [10450] [ERROR] Retrying in 1 second.
+[2017-07-20 22:48:42 +0000] [10450] [ERROR] Connection in use: ('0.0.0.0', 8000)
+[2017-07-20 22:48:42 +0000] [10450] [ERROR] Retrying in 1 second.
+[2017-07-20 22:48:43 +0000] [10450] [ERROR] Connection in use: ('0.0.0.0', 8000)
+[2017-07-20 22:48:43 +0000] [10450] [ERROR] Retrying in 1 second.
+[2017-07-20 22:48:44 +0000] [10450] [ERROR] Connection in use: ('0.0.0.0', 8000)
+[2017-07-20 22:48:44 +0000] [10450] [ERROR] Retrying in 1 second.
+[2017-07-20 22:48:45 +0000] [10450] [ERROR] Can't connect to ('0.0.0.0', 8000)
+[2017-07-20 22:54:08 +0000] [10553] [INFO] Booting worker with pid: 10553
+[2017-07-20 22:54:08 +0000] [10554] [INFO] Booting worker with pid: 10554
+[2017-07-20 22:54:08 +0000] [10557] [INFO] Booting worker with pid: 10557
+[2017-07-20 22:54:08 +0000] [10416] [INFO] Handling signal: hup
+[2017-07-20 22:54:08 +0000] [10416] [INFO] Hang up: Master
+[2017-07-20 22:54:08 +0000] [10558] [INFO] Booting worker with pid: 10558
+[2017-07-20 16:54:08 +0000] [10553] [INFO] Worker exiting (pid: 10553)
+[2017-07-20 22:54:08 +0000] [10559] [INFO] Booting worker with pid: 10559
+[2017-07-20 22:54:08 +0000] [10560] [INFO] Booting worker with pid: 10560
+[2017-07-20 16:54:08 +0000] [10554] [INFO] Worker exiting (pid: 10554)
+[2017-07-20 16:54:08 +0000] [10557] [INFO] Worker exiting (pid: 10557)
+[2017-07-20 23:37:53 +0000] [12148] [INFO] Booting worker with pid: 12148
+[2017-07-20 17:38:08 +0000] [12148] [INFO] Parent changed, shutting down: <Worker 12148>
+[2017-07-20 17:38:08 +0000] [12148] [INFO] Worker exiting (pid: 12148)
+[2017-07-20 17:38:10 +0000] [10559] [INFO] Parent changed, shutting down: <Worker 10559>
+[2017-07-20 17:38:10 +0000] [10559] [INFO] Worker exiting (pid: 10559)
+[2017-07-20 17:38:10 +0000] [10560] [INFO] Parent changed, shutting down: <Worker 10560>
+[2017-07-20 17:38:11 +0000] [10560] [INFO] Worker exiting (pid: 10560)

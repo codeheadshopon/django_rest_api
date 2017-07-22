@@ -1,0 +1,11 @@
+opencv-python
+keras
+django==1.11.3
+pillow==4.1.1
+djangorestframework
+matplotlib==2.0.2
+gunicorn
+tensorflow
+h5py==2.7.0
+gzip-reader
+

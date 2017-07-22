@@ -1,0 +1,1 @@
+web: gunicorn [myproject].[server_configs].[qa].django_rest_api.wsgi:application
